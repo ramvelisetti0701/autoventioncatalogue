@@ -1,0 +1,380 @@
+[{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb86"
+  },
+  "useCaseID": 1,
+  "name": "Sales Order Updates",
+  "processScenario": "Change Sales Inquiry details in ERP system",
+  "summaryAsIsProcess": "Manually change sales required delivery date and order quantity in sales inquiry in ERP system",
+  "automationScope": "By using BluePrism, peform the task automatically.",
+  "functionality": "Sales Enquiry",
+  "processArea": "Lead to Cash",
+  "character": "Hawkeye",
+  "imageSrc": "/images/characters/Hawkeye.png",
+  "botImageSrc": "/images/bots/Hawkeye.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb87"
+  },
+  "useCaseID": 2,
+  "name": "Outbound Delivery Updates",
+  "processScenario": "Change Outbound delivery details in ERP system",
+  "summaryAsIsProcess": "Manually change the 'Delivery quantity' and 'Planned goods movement date' of Outbound delivery in ERP system",
+  "automationScope": "By using BluePrism, peform the task automatically.",
+  "functionality": "Outbound operations",
+  "processArea": "Lead to Cash",
+  "character": "Modok",
+  "imageSrc": "/images/characters/Modok.png",
+  "botImageSrc": "/images/bots/Modok.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb88"
+  },
+  "useCaseID": 3,
+  "name": "Bad Debt Provisioning and Reconciliation",
+  "processScenario": "Create bad debt provision & approvals, Post appropriate journals, Reconcile un-billed revenue, Create & post appropriate journals",
+  "summaryAsIsProcess": "Manually  Create bad debt provision & approvals, Post appropriate journals, Reconcile un-billed revenue, Create & post appropriate journals",
+  "automationScope": "By using BluePrism, peform the task automatically.",
+  "functionality": "G/L Management",
+  "processArea": "Record to Report",
+  "character": "Shang Chi",
+  "imageSrc": "/images/characters/ShangChi.png",
+  "botImageSrc": "/images/bots/ShangChi.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Create",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb89"
+  },
+  "useCaseID": 4,
+  "name": "E mail Alert for Pending GR",
+  "processScenario": "Auto cancellation of inactive orders",
+  "summaryAsIsProcess": "Manually check the pending goods receipt details and send the remainder e-mail for all the pending items",
+  "automationScope": "By using BluePrism, peform the task automatically.",
+  "functionality": "Outbound operations",
+  "processArea": "Lead to Cash",
+  "character": "Moon Knight",
+  "imageSrc": "/images/characters/MoonKnight.png",
+  "botImageSrc": "/images/bots/MoonKnight.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Generate/Transmit",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8a"
+  },
+  "useCaseID": 5,
+  "name": "Core Interface Monitoring",
+  "processScenario": "Monitor CIF Queue thresholds periodically to prevent choking",
+  "summaryAsIsProcess": "Manually monitor the CIF queue thresholds periodically to prevent choking",
+  "automationScope": "Using a Python script, automatically monitor the CIF queue thresholds periodically to prevent choking",
+  "functionality": "Productivity",
+  "processArea": "IT Operations",
+  "character": "Quasar",
+  "imageSrc": "/images/characters/Quasar.png",
+  "botImageSrc": "/images/bots/Quasar.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Monitoring",
+  "rpaToolUsed": "Python"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8b"
+  },
+  "useCaseID": 6,
+  "name": "Backup Monitoring",
+  "processScenario": "Backup Monitoring ",
+  "summaryAsIsProcess": "Manually login into the database server and check the running status of db backup job. If the last run time is more than 60 mins then send an email to the respective team about the job hault status",
+  "automationScope": "Using a Python script, automatically monitor the CIF queue thresholds periodically to prevent choking",
+  "functionality": "Productivity",
+  "processArea": "IT Operations",
+  "character": "S.H.I.E.L.D.",
+  "imageSrc": "/images/characters/S.H.I.E.L.D.png",
+  "botImageSrc": "/images/bots/S.H.I.E.L.D.png",
+  "benefits": "Reduced Turnaround Time",
+  "botFunctionality": "Monitoring",
+  "rpaToolUsed": "Python"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8c"
+  },
+  "useCaseID": 7,
+  "name": "Message & Channel Monitoring",
+  "processScenario": "Message & Channel Monitoring",
+  "summaryAsIsProcess": "Manually upload the master data from a Non-SAP system using the Legacy System Migration Workbench (LSMW) into SAP system",
+  "automationScope": "Peform the task automatically. By using Automtion Anywhere",
+  "functionality": "IT Operations",
+  "processArea": "IT Operations",
+  "character": "Thunderball",
+  "imageSrc": "/images/characters/Thunderball.png",
+  "botImageSrc": "/images/bots/Thunderball.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8d"
+  },
+  "useCaseID": 8,
+  "name": "Purchase Order Price Update",
+  "processScenario": "Update Purchase Order Price ",
+  "summaryAsIsProcess": "Manually identify the Pricing changes from Excel sheet and update the changes in the respective Purchase Order. Also, update the contract price and the \"validity from date\"",
+  "automationScope": "Peform the task automatically. By using Automtion Anywhere",
+  "functionality": "Purchase order management",
+  "processArea": "Source to Settle",
+  "character": "Falcon",
+  "imageSrc": "/images/characters/Falcon.png",
+  "botImageSrc": "/images/bots/Falcon.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8e"
+  },
+  "useCaseID": 9,
+  "name": "Mass PO Update",
+  "processScenario": "Perform Mass PO Update",
+  "summaryAsIsProcess": "Manually perform mass updation/closure/deletion of the Purchase Orders ",
+  "automationScope": "Peform the task automatically. By using Automtion Anywhere",
+  "functionality": "Purchase order management",
+  "processArea": "Source to Settle",
+  "character": "Warlock",
+  "imageSrc": "/images/characters/Warlock.png",
+  "botImageSrc": "/images/bots/Warlock.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb8f"
+  },
+  "useCaseID": 10,
+  "name": "GR IR Reconciliation",
+  "processScenario": "Reconcile Goods Receipt & Invoice Receipt",
+  "summaryAsIsProcess": "Manually download the data and reconcile the GR(goods receipt)/ & IR(Invoice receipt) amount and update the status",
+  "automationScope": "Automatically download the Transaction Detais, GR/IR reports by using Automation Anywhere.",
+  "functionality": "GR/IR",
+  "processArea": "Source to Settle",
+  "character": "Medusa",
+  "imageSrc": "/images/characters/Medusa.png",
+  "botImageSrc": "/images/bots/Medusa.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "Reconciliation",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb90"
+  },
+  "useCaseID": 11,
+  "name": "Outstanding PO Alerts to Vendors",
+  "processScenario": "Notify Vendors on outstanding purchase orders",
+  "summaryAsIsProcess": "Manually check the outstanding/open purchase orders in the ERP system and email the vendors about the outstanding purchase orders with attaching the PO in pdf format",
+  "automationScope": "Peform the task automatically. By using Automtion Anywhere",
+  "functionality": "Purchase order management",
+  "processArea": "Source to Settle",
+  "character": "Iron Man",
+  "imageSrc": "/images/characters/IronMan.png",
+  "botImageSrc": "/images/bots/IronMan.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "Transmit/Email",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb91"
+  },
+  "useCaseID": 12,
+  "name": "Release Held POs",
+  "processScenario": "Release Hold Purchase Orders",
+  "summaryAsIsProcess": "Manually check the purchases orders that are on hold due to past dues or other reasons will have to be validated and Release the orders or provide the required information to the Representative or Manager for approval",
+  "automationScope": "Automatically check the purchases orders that are on hold due to past dues or other reasons will have to be validated and Release the orders or provide the required information to the Representative or Manager for approval",
+  "functionality": "Purchase order management",
+  "processArea": "Source to Settle",
+  "character": "Captain Marvel",
+  "imageSrc": "/images/characters/CapainMarvel.png",
+  "botImageSrc": "/images/bots/CapainMarvel.png",
+  "benefits": "Timely availability of data",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb92"
+  },
+  "useCaseID": 13,
+  "name": "Create New Vendor",
+  "processScenario": "Create new Vendor",
+  "summaryAsIsProcess": "Manually validate new vendor request and if valid, create new vendor in ERP system",
+  "automationScope": "Automatically validate new vendor request and if valid, create new vendor in ERP system by using BluePrism",
+  "functionality": "Master Data Management",
+  "processArea": "Source to Settle",
+  "character": "Thanos",
+  "imageSrc": "/images/characters/Thanos.png",
+  "botImageSrc": "/images/bots/Thanos.png",
+  "benefits": "Higher productivity",
+  "botFunctionality": "Create",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb93"
+  },
+  "useCaseID": 14,
+  "name": "Block/Unblock Vendor ",
+  "processScenario": "Block/Unblock vendor ",
+  "summaryAsIsProcess": "Manually block/unblock the vendors in the ERP system",
+  "automationScope": "Automatically block/unblock the vendors in the ERP system by using Blue Prism",
+  "functionality": "Master Data Management",
+  "processArea": "Source to Settle",
+  "character": "Pheonix Force",
+  "imageSrc": "/images/characters/PheonixForce.png",
+  "botImageSrc": "/images/bots/PheonixForce.png",
+  "benefits": "Higher productivity",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "Blue Prism"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb94"
+  },
+  "useCaseID": 15,
+  "name": "PO Short Closure",
+  "processScenario": "Automate Purchase Order Short Closure",
+  "summaryAsIsProcess": "Manually Short Close the Purchase Order by checking the delivery completion Flag ",
+  "automationScope": "Automatically short close the purchase orders by checking the delivery completion Flag  with help of UIPath",
+  "functionality": "Purchase order management",
+  "processArea": "Source to Settle",
+  "character": "Sandman",
+  "imageSrc": "/images/characters/Sandman.png",
+  "botImageSrc": "/images/bots/Sandman.png",
+  "benefits": "Increase in Efficiency",
+  "botFunctionality": "Edit/Update",
+  "rpaToolUsed": "UI Path"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb95"
+  },
+  "useCaseID": 16,
+  "name": "SO Creation via Excel",
+  "processScenario": "Convert Distributors (Excel) Orders to Sales Order ",
+  "summaryAsIsProcess": "Manually convert the stockist/distributor's purchase order which is in Excel format to sale order",
+  "automationScope": "Automatically convert the distributor's purchase order which is in Excel format to sale order with UIPath",
+  "functionality": "Order management",
+  "processArea": "Lead to Cash",
+  "character": "Captain America",
+  "imageSrc": "/images/characters/CaptainAmerica.png",
+  "botImageSrc": "/images/bots/CaptainAmerica.png",
+  "benefits": "",
+  "botFunctionality": "Create",
+  "rpaToolUsed": "UI Path",
+  "processFlow": "CaptainAmerica.png",
+  "processMap": "CaptainAmerica.pptx"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb96"
+  },
+  "useCaseID": 17,
+  "name": "Customer Invoice Clearing w.r.t Remittance Advice",
+  "processScenario": "Automate Customer Invoice Clearing wrt Remittance advice",
+  "summaryAsIsProcess": "Manually compare the PDF remittance advice from retailer and clear invoices",
+  "automationScope": "Automatically compare the PDF remittance advice from retailer and clear invoices with UIPath",
+  "functionality": "Accounts receivable",
+  "processArea": "Lead to Cash",
+  "character": "Quick Silver",
+  "imageSrc": "/images/characters/QuickSilver.png",
+  "botImageSrc": "/images/bots/QuickSilver.png",
+  "benefits": "50% Increase in Efficiency",
+  "botFunctionality": "Reconciliation",
+  "rpaToolUsed": "UI Path"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb97"
+  },
+  "useCaseID": 18,
+  "name": "Inbound Deliver Date Update",
+  "processScenario": "Updation of Goods arrival date in Inbound delivery",
+  "summaryAsIsProcess": "Manual sales order change in SAP ECC system",
+  "automationScope": "Bot receives order data in email attachment",
+  "functionality": "",
+  "processArea": "Source to Settle",
+  "character": "North Star",
+  "imageSrc": "/images/characters/Northstar.png",
+  "botImageSrc": "/images/bots/Northstar.png",
+  "benefits": "Reduction of manual effort",
+  "botFunctionality": "",
+  "rpaToolUsed": ""
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb98"
+  },
+  "useCaseID": 19,
+  "name": "Number Range Threshold Alert",
+  "processScenario": "Number range failure notification email automation",
+  "summaryAsIsProcess": "Any billing document type number range exhaustion manually need to monitored and maintained after exhaustion",
+  "automationScope": "Send the alert automatically befor exhausting of number range",
+  "functionality": "Order to Cash",
+  "processArea": "Lead to Cash",
+  "character": "Rocket Raccoon",
+  "imageSrc": "/images/characters/RocketRaccoon.png",
+  "botImageSrc": "/images/bots/RocketRaccoon.png",
+  "benefits": "Faster Processing",
+  "botFunctionality": "IT Operations",
+  "rpaToolUsed": ""
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb99"
+  },
+  "useCaseID": 20,
+  "name": "Material Master Creation",
+  "processScenario": "Create Material in SAP-MM01",
+  "summaryAsIsProcess": "Manually Extract the data from input excel and punch the data in SAP material management module to introduce new material in SAP",
+  "automationScope": "Automatically Extract the data from input excel and punch the data in SAP MM module using Automation Anywhere",
+  "functionality": "Material Management",
+  "processArea": "Source to Settle",
+  "character": "Nebula",
+  "imageSrc": "/images/characters/Nebula.png",
+  "botImageSrc": "/images/bots/Nebula.png",
+  "benefits": "Timely availability of data",
+  "botFunctionality": "Create",
+  "rpaToolUsed": "Automation Anywhere"
+},
+{
+  "_id": {
+    "$oid": "6481ba9513b7b9f274e1cb9a"
+  },
+  "useCaseID": 21,
+  "name": "Release Blocked EDI Orders",
+  "processScenario": "Release Blocked EDI Orders",
+  "summaryAsIsProcess": "EDI order generated are blocked(Delivery block 07) on creation. Orders blocks to be released after pricing validation checks or to be sent for manual verification in case of validation failure.",
+  "automationScope": "Perform the task automatically by using Automation Anywhere",
+  "functionality": "OTC",
+  "processArea": "Lead to Cash",
+  "character": "Doctor Octopus",
+  "imageSrc": "/images/characters/DoctorOctopus.png",
+  "botImageSrc": "/images/bots/DoctorOctopus.png",
+  "benefits": "",
+  "botFunctionality": "",
+  "rpaToolUsed": "RPA AA"
+}]
