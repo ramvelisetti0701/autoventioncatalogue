@@ -2,7 +2,7 @@
 
 /* Primary Colors */
 :root {
-  --primary-color: burlywood;
+  --primary-color: white ;
   --secondary-color: steelblue;
 }
 
@@ -52,7 +52,7 @@ a:hover {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 4fr);
+  grid-template-columns: repeat(3, 3fr);
   gap: 20px;
   text-align: center;
 }
@@ -171,7 +171,7 @@ video {
   max-width: 800px;
 }
 
-.video-container button {
+.overlay button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -179,6 +179,15 @@ video {
   background-color: white;
   border: none;
   cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  display: flex;
 }
 
 .close-btn {

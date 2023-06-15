@@ -1,34 +1,20 @@
-import React, { Suspense, lazy, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { Suspense } from "react";
 
-const VideoPlayer = lazy(() => import ('./videoplayer'));
-
-function ImageOverlay() { 
-    const [isVideoOpen, setIsVideoOpen] = useState(false);
-    
-    function openVideo() { 
-        setIsVideoOpen(true);
-    }
-
-    function closeVideo() {
-        setIsVideoOpen(false);
-    }
+function ImageOverlay({ imageData, closeOverlay }) { 
 
     return (
         <div>
-            {isVideoOpen && (
-                <div className="overlay">
-                    <div className="video-container">
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <VideoPlayer />
-                        </Suspense>
-                        <button onClick={closeVideo}>Close Video</button>
-                    </div>
+            <div className="overlay">
+                <div className="img-container">
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <img alt={imageData.character} src={imageData.processFlowEnlarged} />
+                    </Suspense>
                 </div>
-            )}
+                <button onClick={closeOverlay}>Close</button>
+            </div>
         </div>
     );
 
 };
 
-export default VideoOverlay;
+export default ImageOverlay;

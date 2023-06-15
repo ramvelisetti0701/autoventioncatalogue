@@ -1,10 +1,10 @@
 import React from 'react';
 
-function VideoPlayer() { 
+function VideoPlayer({videoData}) { 
     return (
         <div>
             <video controls>
-                <source src='../processMaps/CaptainAmerica.mp4' type='video/mp4'/>
+                <source src={videoData} type='video/mp4'/>
             </video>
         </div>
     );

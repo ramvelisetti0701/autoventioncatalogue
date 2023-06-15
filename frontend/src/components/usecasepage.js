@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import VideoOverlay from './videooverlay';
+import ImageOverlay from './imageoverlay';
 import fallbackData from '../fallbackdata/useCases.json';
 
 function UseCasePage() {
@@ -13,8 +13,6 @@ function UseCasePage() {
     const filteredFallbackData = fallbackData.filter(useCase => useCase.character === character);
 
     const [useCaseByCharacter, setuseCaseByCharacter] = useState([]);
-    
-    const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     useEffect(() => {
         /* async function fetchData() { 
@@ -41,41 +39,21 @@ function UseCasePage() {
         fetchData(); */
     }, [filteredFallbackData]); 
 
-    function openVideoOverlay(){ 
+    const [isImageOpen, setIsImageOpen] = useState(false);
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+    const openImageOverlay = () => {
+        setIsImageOpen(true);
+    };
+    
+    const openVideoOverlay = () => { 
         setIsVideoOpen(true);
     };
 
-    /* const [showOverlay, setShowOverlay] = useState(false);
-
-    const [showVideoOverlay, setShowVideoOverlay] = useState(false);
-
-    const handleIconClick = () => {
-        setShowOverlay(true);
-    };
-
-    const handleTitleClick = () => {
-        setShowVideoOverlay(true);
-    };
-
     const closeOverlay = () => {
-        setShowOverlay(false);
-        setShowVideoOverlay(false);
+        setIsImageOpen(false);
+        setIsVideoOpen(false);
     };
-    */
-
-   {/*  const ImageOverlay = () => (
-        <div className="overlay">
-            {/* Image Overlay Content */}
-            {/* <div className="close-btn" onClick={closeOverlay}>Close</div>
-        </div>
-    ); */}
-
-    {/* const VideoOverlay = () => (
-        <div className="overlay">
-            {/* Video Overlay Content */}
-            {/* <div className="close-btn" onClick={closeOverlay}>Close</div>
-        </div>
-    ); */}
 
     return ( 
         <div>
@@ -83,18 +61,26 @@ function UseCasePage() {
                 <h1>{character}</h1>
                 <div className="image-title-container">
                     <div className="image-container">
-                        <img src={useCaseByCharacter.botImageSrc} alt={useCaseByCharacter.character} />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <img src={useCaseByCharacter.botImageSrc} alt={useCaseByCharacter.character} />
+                        </Suspense>
                     </div>
                     <div className="title-info-container">
                         <div className="title-box">
-                            <h2>{useCaseByCharacter.name}</h2>
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <h2>{useCaseByCharacter.name}</h2>
+                            </Suspense>
                         </div>
                         <div className="info-container">
                             <div className="info-box">
-                                <h2>{useCaseByCharacter.processArea}</h2>
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <h2>{useCaseByCharacter.processArea}</h2>
+                                </Suspense>
                             </div>
                             <div className="info-box">
-                                <h2>{useCaseByCharacter.rpaToolUsed}</h2>
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <h2>{useCaseByCharacter.rpaToolUsed}</h2>
+                                </Suspense>
                             </div>
                         </div>
                     </div>
@@ -103,25 +89,33 @@ function UseCasePage() {
             <div className="body-container">
                 <div className="body-box">
                     <div className="body-item">
-                        <p><b>Process Scenario : </b> {useCaseByCharacter.processScenario}</p>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <p><b>Process Scenario : </b> {useCaseByCharacter.processScenario}</p>
+                        </Suspense>
                     </div>
                     <div className="body-item">
-                        <p><b>As-Is Process : </b> {useCaseByCharacter.summaryAsIsProcess}</p>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <p><b>As-Is Process : </b> {useCaseByCharacter.summaryAsIsProcess}</p>
+                        </Suspense>
                     </div>
                     <div className="body-item">
-                        <p><b>Functionality : </b> {useCaseByCharacter.automationScope}</p>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <p><b>Functionality : </b> {useCaseByCharacter.automationScope}</p>
+                        </Suspense>
                     </div>
-                    <div className="body-item">
-                        <p><b>SAP Process Flow : </b> </p>
-                    </div>
-                    <div className="body-item">
-                        <p><b>Process Map : </b> <img alt='Captain America' className='icon' src='/images/processFlows/icons/CaptainAmerica.ico' onClick={openVideoOverlay} /> </p>
-                    </div>
+                    {(useCaseByCharacter.processFlowIcon) ? (
+                        <div className="body-item">
+                            <p><b>SAP Process Flow : </b> <img alt={character} className='icon' src={useCaseByCharacter.processFlowIcon} onClick={openImageOverlay} /></p>
+                        </div>
+                    ) : null}
+                    {(useCaseByCharacter.processMapVideo) ? (
+                        <div className="body-item">
+                            <p><b>Process Map : </b> <img alt={character} className='icon' src='/video.png' onClick={openVideoOverlay} /> </p>
+                        </div>
+                    ) : null}
                 </div>
-                {isVideoOpen && <VideoOverlay/>}
-                {/* {showOverlay && <ImageOverlay />}
-
-                {showVideoOverlay && <VideoOverlay />} */}
+                {isImageOpen && <ImageOverlay imageData={ useCaseByCharacter } closeOverlay={closeOverlay} />}
+                {isVideoOpen && <VideoOverlay videoData={ useCaseByCharacter.processMapVideo } closeOverlay={closeOverlay} />}
             </div>
         </div>
         

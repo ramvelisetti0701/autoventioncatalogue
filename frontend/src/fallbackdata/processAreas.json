@@ -1,32 +1,24 @@
 [{
   "_id": {
-    "$oid": "647f2fabf2b3de22a15d1f39"
+    "$oid": "648ae68a937ed9acd77c2b3f"
   },
   "processID": 1,
   "processArea": "IT Operations",
-  "imageSrc": "/images/processes/ITOperations.jpg"
+  "imageSrc": "/images/processes/ITOperations.png"
 },
 {
   "_id": {
-    "$oid": "647f2fabf2b3de22a15d1f3a"
+    "$oid": "648ae68a937ed9acd77c2b40"
   },
   "processID": 2,
   "processArea": "Lead to Cash",
-  "imageSrc": "/images/processes/LeadToCash.jpg"
+  "imageSrc": "/images/processes/LeadToCash.png"
 },
 {
   "_id": {
-    "$oid": "647f2fabf2b3de22a15d1f3b"
+    "$oid": "648ae68a937ed9acd77c2b41"
   },
   "processID": 3,
-  "processArea": "Record To Report",
-  "imageSrc": "/images/processes/R2R.jpg"
-},
-{
-  "_id": {
-    "$oid": "647f2fabf2b3de22a15d1f3c"
-  },
-  "processID": 4,
   "processArea": "Source to Settle",
-  "imageSrc": "/images/processes/SourceToSettle.jpg"
+  "imageSrc": "/images/processes/SourceToSettle.png"
 }]
